@@ -8,7 +8,7 @@ export default function UserInput({
     return (
         <section id="user-input">
             <div className="input-group">
-                <div>
+                <p>
                     <label htmlFor="initial-investment-input">
                         INITIAL INVESTMENT
                     </label>
@@ -21,8 +21,8 @@ export default function UserInput({
                             handleChange('initialInvestment', event)
                         }
                     />
-                </div>
-                <div>
+                </p>
+                <p>
                     <label htmlFor="annual-investment-input">
                         ANNUAL INVESTMENT
                     </label>
@@ -35,10 +35,8 @@ export default function UserInput({
                             handleChange('annualInvestment', event)
                         }
                     />
-                </div>
-            </div>
-            <div className="input-group">
-                <div>
+                </p>
+                <p>
                     <label htmlFor="expected-return-input">
                         EXPECTED RETURN
                     </label>
@@ -51,8 +49,8 @@ export default function UserInput({
                             handleChange('expectedReturn', event)
                         }
                     />
-                </div>
-                <div>
+                </p>
+                <p>
                     <label htmlFor="duration-input">DURATION</label>
                     <input
                         id="duration-input"
@@ -61,8 +59,8 @@ export default function UserInput({
                         required
                         onChange={(event) => handleChange('duration', event)}
                     />
-                </div>
+                </p>
             </div>
-        </div>
+        </section>
     );
 }
