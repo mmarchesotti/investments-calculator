@@ -12,7 +12,7 @@ function App() {
     });
 
     function handleChange(inputIdentifier, event) {
-        const newValue = parseInt(event.currentTarget.value);
+        const newValue = +event.currentTarget.value;
         setInvestmentData((investmentData) => {
             return {
                 ...investmentData,
