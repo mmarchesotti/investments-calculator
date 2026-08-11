@@ -21,6 +21,8 @@ function App() {
         });
     }
 
+    const inputIsValid = investmentData.duration >= 1;
+
     return (
         <main>
             <Header></Header>
@@ -28,7 +30,11 @@ function App() {
                 handleChange={handleChange}
                 {...investmentData}
             ></UserInput>
-            <Result {...investmentData}></Result>
+            {inputIsValid ? (
+                <Result {...investmentData}></Result>
+            ) : (
+                <p className="center">Enter a duration greater than 0.</p>
+            )}
         </main>
     );
 }
