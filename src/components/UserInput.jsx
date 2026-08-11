@@ -10,7 +10,7 @@ export default function UserInput({
             <div className="input-group">
                 <p>
                     <label htmlFor="initial-investment-input">
-                        INITIAL INVESTMENT
+                        Initial Investment
                     </label>
                     <input
                         id="initial-investment-input"
@@ -24,7 +24,7 @@ export default function UserInput({
                 </p>
                 <p>
                     <label htmlFor="annual-investment-input">
-                        ANNUAL INVESTMENT
+                        Annual Investment
                     </label>
                     <input
                         id="annual-investment-input"
@@ -40,7 +40,7 @@ export default function UserInput({
             <div className="input-group">
                 <p>
                     <label htmlFor="expected-return-input">
-                        EXPECTED RETURN
+                        Expected Return
                     </label>
                     <input
                         id="expected-return-input"
@@ -53,7 +53,7 @@ export default function UserInput({
                     />
                 </p>
                 <p>
-                    <label htmlFor="duration-input">DURATION</label>
+                    <label htmlFor="duration-input">Duration</label>
                     <input
                         id="duration-input"
                         type="number"
