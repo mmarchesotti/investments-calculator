@@ -36,6 +36,8 @@ export default function UserInput({
                         }
                     />
                 </p>
+            </div>
+            <div className="input-group">
                 <p>
                     <label htmlFor="expected-return-input">
                         EXPECTED RETURN
