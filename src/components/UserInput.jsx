@@ -6,7 +6,7 @@ export default function UserInput({
     handleChange,
 }) {
     return (
-        <div id="user-input">
+        <section id="user-input">
             <div className="input-group">
                 <div>
                     <label htmlFor="initial-investment-input">
