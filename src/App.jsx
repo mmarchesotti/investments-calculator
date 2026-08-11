@@ -3,17 +3,13 @@ import UserInput from './components/UserInput.jsx';
 import Result from './components/Result.jsx';
 import { useState } from 'react';
 
-const INITIAL_INVESTMENT_DATA = {
-    initialInvestment: null,
-    annualInvestment: null,
-    expectedReturn: null,
-    duration: null,
-};
-
 function App() {
-    const [investmentData, setInvestmentData] = useState(
-        INITIAL_INVESTMENT_DATA,
-    );
+    const [investmentData, setInvestmentData] = useState({
+        initialInvestment: 10000,
+        annualInvestment: 1000,
+        expectedReturn: 10,
+        duration: 10,
+    });
 
     function handleChange(inputIdentifier, event) {
         const newValue = parseInt(event.currentTarget.value);
