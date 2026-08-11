@@ -3,10 +3,7 @@ export default function UserInput({
     annualInvestment,
     expectedReturn,
     duration,
-    handleInitialInvestmentChange,
-    handleAnnualInvestmentChange,
-    handleExpectedReturnChange,
-    handleDurationChange,
+    handleChange,
 }) {
     return (
         <div id="user-input">
@@ -19,7 +16,9 @@ export default function UserInput({
                         id="initial-investment-input"
                         type="number"
                         value={initialInvestment}
-                        onChange={handleInitialInvestmentChange}
+                        onChange={(event) =>
+                            handleChange('initialInvestment', event)
+                        }
                     />
                 </div>
                 <div>
@@ -30,7 +29,9 @@ export default function UserInput({
                         id="annual-investment-input"
                         type="number"
                         value={annualInvestment}
-                        onChange={handleAnnualInvestmentChange}
+                        onChange={(event) =>
+                            handleChange('annualInvestment', event)
+                        }
                     />
                 </div>
             </div>
@@ -41,7 +42,9 @@ export default function UserInput({
                         id="expected-return-input"
                         type="number"
                         value={expectedReturn}
-                        onChange={handleExpectedReturnChange}
+                        onChange={(event) =>
+                            handleChange('expectedReturn', event)
+                        }
                     />
                 </div>
                 <div>
@@ -50,7 +53,7 @@ export default function UserInput({
                         id="duration-input"
                         type="number"
                         value={duration}
-                        onChange={handleDurationChange}
+                        onChange={(event) => handleChange('duration', event)}
                     />
                 </div>
             </div>

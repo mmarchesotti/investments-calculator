@@ -15,50 +15,21 @@ function App() {
         INITIAL_INVESTMENT_DATA,
     );
 
-    function handleInitialInvestmentChange(event) {
-        const newInitialInvestment = parseInt(event.currentTarget.value);
-        const newInvestmentData = {
-            ...investmentData,
-            initialInvestment: newInitialInvestment,
-        };
-        setInvestmentData(newInvestmentData);
-    }
-
-    function handleAnnualInvestmentChange(event) {
-        const newAnnualInvestment = parseInt(event.currentTarget.value);
-        const newInvestmentData = {
-            ...investmentData,
-            annualInvestment: newAnnualInvestment,
-        };
-        setInvestmentData(newInvestmentData);
-    }
-
-    function handleExpectedReturnChange(event) {
-        const newExpectedReturn = parseInt(event.currentTarget.value);
-        const newInvestmentData = {
-            ...investmentData,
-            expectedReturn: newExpectedReturn,
-        };
-        setInvestmentData(newInvestmentData);
-    }
-
-    function handleDurationChange(event) {
-        const newDuration = parseInt(event.currentTarget.value);
-        const newInvestmentData = {
-            ...investmentData,
-            duration: newDuration,
-        };
-        setInvestmentData(newInvestmentData);
+    function handleChange(inputIdentifier, event) {
+        const newValue = parseInt(event.currentTarget.value);
+        setInvestmentData((investmentData) => {
+            return {
+                ...investmentData,
+                [inputIdentifier]: newValue,
+            };
+        });
     }
 
     return (
         <main className="center">
             <Header></Header>
             <UserInput
-                handleInitialInvestmentChange={handleInitialInvestmentChange}
-                handleAnnualInvestmentChange={handleAnnualInvestmentChange}
-                handleExpectedReturnChange={handleExpectedReturnChange}
-                handleDurationChange={handleDurationChange}
+                handleChange={handleChange}
                 {...investmentData}
             ></UserInput>
             <Result {...investmentData}></Result>
