@@ -22,7 +22,7 @@ function App() {
     }
 
     return (
-        <main className="center">
+        <main>
             <Header></Header>
             <UserInput
                 handleChange={handleChange}
