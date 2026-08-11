@@ -1,4 +1,4 @@
-import { calculateInvestmentResults, formatter } from '../src/util/investment';
+import { calculateInvestmentResults, formatter } from '../util/investment';
 
 export default function Result({
     initialInvestment,

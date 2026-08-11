@@ -1,6 +1,6 @@
-import Header from '../components/Header.jsx';
-import UserInput from '../components/UserInput.jsx';
-import Result from '../components/Result.jsx';
+import Header from './components/Header.jsx';
+import UserInput from './components/UserInput.jsx';
+import Result from './components/Result.jsx';
 import { useState } from 'react';
 
 const INITIAL_INVESTMENT_DATA = {
