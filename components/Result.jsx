@@ -36,7 +36,7 @@ export default function Result({
                 <tr>
                     <td>Year</td>
                     <td>Investment Value</td>
-                    <td>Interst (Year)</td>
+                    <td>Interest (Year)</td>
                     <td>Total Interest</td>
                     <td>Invested Capital</td>
                 </tr>
