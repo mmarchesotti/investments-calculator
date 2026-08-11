@@ -15,7 +15,7 @@ export default function Result({
 
     const tableBody = investmentResults.map((annualData) => {
         return (
-            <tr>
+            <tr key={annualData.year}>
                 <td>{annualData.year}</td>
                 <td>{formatter.format(annualData.valueEndOfYear, 0)}</td>
                 <td>{formatter.format(annualData.interest, 0)}</td>
