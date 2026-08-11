@@ -17,15 +17,14 @@ export default function Result({
         return (
             <tr key={annualData.year}>
                 <td>{annualData.year}</td>
-                <td>{formatter.format(annualData.valueEndOfYear, 0)}</td>
-                <td>{formatter.format(annualData.interest, 0)}</td>
+                <td>{formatter.format(annualData.valueEndOfYear)}</td>
+                <td>{formatter.format(annualData.interest)}</td>
                 <td>
                     {formatter.format(
                         annualData.valueEndOfYear - annualData.totalInvestment,
-                        0,
                     )}
                 </td>
-                <td>{formatter.format(annualData.totalInvestment, 0)}</td>
+                <td>{formatter.format(annualData.totalInvestment)}</td>
             </tr>
         );
     });
